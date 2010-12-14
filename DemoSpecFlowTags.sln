@@ -3,17 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoSpecFlowTags", "DemoSpecFlowTags\DemoSpecFlowTags.csproj", "{25CB7D96-7B8D-4C4E-BAAF-0D2A0EAB8E6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5DD32F3-8401-4119-938B-6053CB532BB1}"
-	ProjectSection(SolutionItems) = preProject
-		DemoSpecFlowTags.vsmdi = DemoSpecFlowTags.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
-EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = DemoSpecFlowTags.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

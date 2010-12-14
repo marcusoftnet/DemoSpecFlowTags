@@ -75,18 +75,18 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("A scenario without tag")]
-        public virtual void AScenarioWithoutTag()
+        [NUnit.Framework.DescriptionAttribute("A scenario without tags")]
+        public virtual void AScenarioWithoutTags()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario without tag", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario without tags", ((string[])(null)));
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.Given("that my scenario has no tags");
+ testRunner.Given("that my scenario has 0 tags");
 #line 16
  testRunner.When("I run the scenario");
 #line 17
- testRunner.Then("before scenario hook without tag is run");
+ testRunner.Then("before scenario hook with \'\' is run");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -101,11 +101,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 21
- testRunner.Given("that my scenario has 1 tag");
+ testRunner.Given("that my scenario has 1 tags");
 #line 22
  testRunner.When("I run the scenario");
 #line 23
- testRunner.Then("before scenario hook with the tag is run");
+ testRunner.Then("before scenario hook with \'testTag1\' is run");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -128,7 +128,28 @@ this.ScenarioSetup(scenarioInfo);
 #line 28
  testRunner.When("I run the scenario");
 #line 29
- testRunner.Then("before scenario hook with the tags is run");
+ testRunner.Then("before scenario hook with \'testTag1, testTag2, testTag3\' is run");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("A scenario with 2 tags")]
+        [NUnit.Framework.CategoryAttribute("testTag1")]
+        [NUnit.Framework.CategoryAttribute("testTag3")]
+        public virtual void AScenarioWith2Tags()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario with 2 tags", new string[] {
+                        "testTag1",
+                        "testTag3"});
+#line 32
+this.ScenarioSetup(scenarioInfo);
+#line 33
+ testRunner.Given("that my scenario has 2 tags");
+#line 34
+ testRunner.When("I run the scenario");
+#line 35
+ testRunner.Then("before scenario hook with \'testTag1, testTag3\' is run");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
